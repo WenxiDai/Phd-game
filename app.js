@@ -10,6 +10,5 @@ let app = express();
     });
     
     app.listen(port, () => {
-    console.log(`Server started on port ${port}.\nPlease navigate to http://localhost:${port} in your browser.`);
-    console.log(`You can also try the new interface at http://localhost:${port}/new`);
+    console.log(`Server started on port ${port}.\n You can navigate to new interface at http://localhost:${port}/new`);
 });

@@ -21,7 +21,7 @@ http://localhost:8000/new
 
 ## About the Game
 
-PhD Simulator is a text-based random event-driven game that models the typical experiences of a PhD student. You'll face various challenges such as:
+PhD Simulator is a text-based random event-driven game that models the typical experiences of a PhD student. You'll face various challenges such as, which are all realized using random events:
 
 - Managing your time between reading papers and conducting experiments
 - Dealing with broken lab equipment
@@ -31,7 +31,7 @@ PhD Simulator is a text-based random event-driven game that models the typical e
 - Navigating the ups and downs of advisor relationships
 - Balancing work and mental health
 
-Your goal is to publish the required number of papers to qualify for your degree before running out of hope or time!
+Your goal is to publish the required number of papers (3 conference papers to graduate) to qualify for your degree before running out of hope or time!
 
 ## Game Mechanics
 
@@ -54,7 +54,7 @@ The game uses YAML files for event definitions, making it highly modifiable. You
 
 ## Credits
 
-Original game developed by Mianzhi Wang, modified and enhanced for this version.
+Original game developed by Mianzhi Wang (open source game), modified and enhanced for this version.
 
 ## License
 

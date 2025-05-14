@@ -83,7 +83,34 @@ class DirectUIProxy implements GuiActionProxy {
         this.messageWindow.appendChild(this.messageText);
         this.messageWindow.appendChild(this.choicesContainer);
         gameContainer.appendChild(this.messageWindow);
+
+        const characterPortrait = document.getElementById('character-portrait');
+        if (!characterPortrait) {
+            const portrait = document.createElement('div');
+            portrait.id = 'character-portrait';
+            portrait.style.position = 'absolute';
+            portrait.style.top = '20px';
+            portrait.style.left = '20px';
+            portrait.style.width = '80px';
+            portrait.style.height = '80px';
+            portrait.style.borderRadius = '50%';
+            portrait.style.border = '3px solid #e94560';
+            portrait.style.overflow = 'hidden';
+            portrait.style.boxShadow = '0 0 10px rgba(233, 69, 96, 0.7)';
+            portrait.style.zIndex = '100';
         
+            const portraitImg = document.createElement('img');
+            portraitImg.src = 'dist/images/submitting_paper.png'; // 角色头像图片路径
+            portraitImg.style.width = '100%';
+            portraitImg.style.height = '100%';
+            portraitImg.style.objectFit = 'cover';
+        
+            portrait.appendChild(portraitImg);
+            const gameContainer = document.getElementById('game-container');
+            if (gameContainer) {
+                gameContainer.appendChild(portrait);
+            }
+        }
     }
     
     displayMessage(message: string, confirm: string, icon?: string, fx?: string): Promise<void> {

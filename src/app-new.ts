@@ -100,7 +100,7 @@ class DirectUIProxy implements GuiActionProxy {
             portrait.style.zIndex = '100';
         
             const portraitImg = document.createElement('img');
-            portraitImg.src = 'dist/images/submitting_paper.png'; // 角色头像图片路径
+            portraitImg.src = 'dist/images/character.png'; // 角色头像图片路径
             portraitImg.style.width = '100%';
             portraitImg.style.height = '100%';
             portraitImg.style.objectFit = 'cover';

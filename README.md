@@ -3,7 +3,10 @@
 A text-based game simulating the life of a PhD student with random events, challenges, and decisions that reflect the real-life struggles and triumphs of pursuing a doctoral degree.
 
 ## How to Run
-
+First, install all the dependencies. Run the code in the terminal section as follows:
+```
+npm install
+```
 To run this game, run the code in the terminal section as follows:
 
 ```

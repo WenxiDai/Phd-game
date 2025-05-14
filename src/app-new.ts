@@ -89,18 +89,21 @@ class DirectUIProxy implements GuiActionProxy {
             const portrait = document.createElement('div');
             portrait.id = 'character-portrait';
             portrait.style.position = 'absolute';
-            portrait.style.top = '20px';
-            portrait.style.left = '20px';
-            portrait.style.width = '80px';
-            portrait.style.height = '80px';
+
+            portrait.style.top = '10%';
+            portrait.style.left = '50%';
+            portrait.style.transform = 'translate(-50%)';
+
+            portrait.style.width = '100px';
+            portrait.style.height = '100px';
             portrait.style.borderRadius = '50%';
             portrait.style.border = '3px solid #e94560';
             portrait.style.overflow = 'hidden';
             portrait.style.boxShadow = '0 0 10px rgba(233, 69, 96, 0.7)';
-            portrait.style.zIndex = '100';
+            portrait.style.zIndex = '50';
         
             const portraitImg = document.createElement('img');
-            portraitImg.src = 'dist/images/character.png'; // 角色头像图片路径
+            portraitImg.src = '/images/character.png'; // 角色头像图片路径
             portraitImg.style.width = '100%';
             portraitImg.style.height = '100%';
             portraitImg.style.objectFit = 'cover';
@@ -346,6 +349,8 @@ class TemplateGameApp {
         try {
             // Ensure UI is ready
             this.uiProxy.ensureUIElements();
+
+            this.gameEngine.variableStore.setVar('rule.papersRequired', 3);
             
             // Start the game engine
             await this.gameEngine.start(newSeed);

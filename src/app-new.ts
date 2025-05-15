@@ -421,9 +421,12 @@ class TemplateGameApp {
             const gameOverMessage = document.getElementById('game-over-message');
             if (gameOverMessage) {
                 if (event.state === EndGameState.Win) {
-                    gameOverMessage.innerHTML = '<h2>Congratulations!</h2><p>You have earned your PhD degree!</p>';
+                    gameOverMessage.innerHTML = '<h2>Congratulations!</h2><p>You have earned your PhD degree!</p>' +
+                      "<img src='images/graduate.png' alt='Graduation Ending' style='max-width: 80%; margin-top: 20px; border-radius: 10px;' />";
+    
                 } else {
-                    gameOverMessage.innerHTML = '<h2>Game Over</h2><p>Your PhD journey has ended prematurely.</p><p>Better luck next time!</p>';
+                    gameOverMessage.innerHTML = '<h2>Game Over</h2><p>Your PhD journey has ended prematurely.</p><p>Better luck next time!</p>' +
+                      "<img src='images/ending.png' alt='Graduation Ending' style='max-width: 80%; margin-top: 20px; border-radius: 10px;' />";
                 }
                 // Play appropriate BGM for win or loss
                 if (event.state === EndGameState.Win) {
